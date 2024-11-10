@@ -4,19 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Water Control App</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background and centering */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* App container styling */
+        .app-container {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 800px;
+            height: 90vh;
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Header styling */
+        .app-header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 1.5em;
+        }
+
+        /* Frame styling for embedded content */
+        .app-frame {
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer (optional) */
+        .app-footer {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .app-container {
+                width: 100%;
+                height: 100vh;
+                max-width: none;
+                border-radius: 0;
+            }
+
+            .app-header {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="app-container">
-        <header>
-            <h1>Water Control App</h1>
-        </header>
-        <main>
-            <iframe width="90%" height="90%" frameborder="0" src="https://stem.ubidots.com/app/dashboards/public/dashboard/A2B9tMYyBXtlBARKCAzTOCjv3V0vLKI_ptukDavaDAs?navbar=false&contextbar=false"></iframe>
-        </main>
-        <footer>
+        <!-- App header -->
+        <div class="app-header">
+            Water Control App
+        </div>
+
+        <!-- Embedded Ubidots Dashboard -->
+        <iframe class="app-frame" src="https://stem.ubidots.com/app/dashboards/public/dashboard/A2B9tMYyBXtlBARKCAzTOCjv3V0vLKI_ptukDavaDAs?navbar=false&contextbar=false"></iframe>
+
+        <!-- Optional Footer -->
+        <div class="app-footer">
             © 2024 Water Control System
-        </footer>
+        </div>
     </div>
 </body>
 </html>
