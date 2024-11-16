@@ -1,3 +1,3 @@
 # beta
 
->>>smartdrain.site
+>>>https://smartdrain.site/
